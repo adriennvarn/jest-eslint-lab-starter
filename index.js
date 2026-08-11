@@ -27,6 +27,9 @@ function filterActiveUsers(users) {
  */
 function logAction(action, username) {
     const timestamp = new Date().toISOString()
+    if (typeof action == 'undefined' || typeof username == 'undefined') {
+        return ''
+    }
     return `User ${username} performed ${action} at ${timestamp}`
 }
 

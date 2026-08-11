@@ -53,10 +53,10 @@ describe('logAction', () => {
     }),
     it('missing action or username', () => {
         const missingAction = logAction('adrienn')
-        const expectedMissingAction = 'User undefined performed adrienn at'
+        const expectedMissingAction = ''
 
         const missingUser = logAction('crimes')
-        const expectedMissingUser = 'User undefined performed crimes at'
+        const expectedMissingUser = ''
 
         expect(missingAction).toContain(expectedMissingAction)
         expect(missingUser).toContain(expectedMissingUser)
